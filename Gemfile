@@ -57,6 +57,7 @@ gem 'memcachier'
 
 gem 'csv_shaper'
 gem 'rubyzip'
+gem 'stackprof'
 gem 'sucker_punch'
 
 group :production do
