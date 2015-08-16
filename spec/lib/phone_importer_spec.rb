@@ -71,6 +71,7 @@ describe PhoneImporter do
         its(:number) { is_expected.to eq '703-555-1212' }
         its(:number_type) { is_expected.to eq 'voice' }
         its(:vanity_number) { is_expected.to eq '703-555-FOOD' }
+        its(:phone_hours) { is_expected.to eq 'M-F, 8am-5pm' }
         its(:country_prefix) { is_expected.to eq '1' }
         its(:location_id) { is_expected.to eq 1 }
       end
@@ -181,7 +182,7 @@ describe PhoneImporter do
     it 'matches required headers in Wiki' do
       expect(PhoneImporter.required_headers).
         to eq %w(id location_id organization_id service_id contact_id department
-                 extension number number_type vanity_number country_prefix)
+                 extension number number_type vanity_number country_prefix phone_hours)
     end
   end
 end

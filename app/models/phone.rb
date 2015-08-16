@@ -4,7 +4,7 @@ class Phone < ActiveRecord::Base
   default_scope { order('id ASC') }
 
   attr_accessible :country_prefix, :department, :extension, :number,
-                  :number_type, :vanity_number
+                  :number_type, :vanity_number, :phone_hours
 
   belongs_to :location, touch: true
   belongs_to :contact, touch: true

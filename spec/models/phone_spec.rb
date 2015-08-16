@@ -11,6 +11,7 @@ describe Phone do
   it { is_expected.to allow_mass_assignment_of(:number) }
   it { is_expected.to allow_mass_assignment_of(:number_type) }
   it { is_expected.to allow_mass_assignment_of(:vanity_number) }
+  it { is_expected.to allow_mass_assignment_of(:phone_hours) }
 
   it { is_expected.to belong_to(:location).touch(true) }
   it { is_expected.to belong_to(:contact).touch(true) }
@@ -47,6 +48,7 @@ describe Phone do
       expect(phone.number).to eq('650 851-1210')
       expect(phone.extension).to eq('2000')
       expect(phone.vanity_number).to eq('800-FLY-AWAY')
+      expect(phone.phone_hours).to eq('M-F, 8am-5pm')
     end
   end
 end

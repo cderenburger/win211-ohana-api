@@ -480,7 +480,8 @@ CREATE TABLE phones (
     country_prefix character varying(255),
     contact_id integer,
     organization_id integer,
-    service_id integer
+    service_id integer,
+    phone_hours text
 );
 
 
@@ -1377,4 +1378,6 @@ INSERT INTO schema_migrations (version) VALUES ('20150107163352');
 INSERT INTO schema_migrations (version) VALUES ('20150314204202');
 
 INSERT INTO schema_migrations (version) VALUES ('20150315202808');
+
+INSERT INTO schema_migrations (version) VALUES ('20150816025501');
 

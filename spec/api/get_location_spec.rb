@@ -195,7 +195,8 @@ describe 'GET /locations/:id' do
             'extension'     => @location.phones.first.extension,
             'number'        => @location.phones.first.number,
             'number_type'   => @location.phones.first.number_type,
-            'vanity_number' => @location.phones.first.vanity_number
+            'vanity_number' => @location.phones.first.vanity_number,
+            'phone_hours'   => @location.phones.first.phone_hours
           }]
         )
     end

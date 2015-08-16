@@ -153,6 +153,7 @@ describe 'GET /locations' do
           'department'    => @location.phones.first.department,
           'extension'     => @location.phones.first.extension,
           'vanity_number' => @location.phones.first.vanity_number,
+          'phone_hours'   => @location.phones.first.phone_hours,
           'number_type'   => @location.phones.first.number_type
         }]
 

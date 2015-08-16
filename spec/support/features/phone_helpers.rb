@@ -17,6 +17,7 @@ module Features
       fill_in department, with: options[:department]
       fill_in extension, with: options[:extension]
       fill_in vanity_number, with: options[:vanity_number]
+      fill_in phone_hours, with: options[:phone_hours]
     end
 
     def number
@@ -37,6 +38,10 @@ module Features
 
     def number_type
       find(:xpath, './/select[contains(@name, "[number_type]")]')[:id]
+    end
+
+    def phone_hours
+      find(:xpath, './/input[contains(@name, "[phone_hours]")]')[:id]
     end
 
     def delete_phone

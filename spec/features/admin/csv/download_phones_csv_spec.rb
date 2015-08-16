@@ -16,12 +16,12 @@ feature 'Downloading Phones CSV' do
   it 'contains the same headers as in the import Wiki' do
     expect(csv.first).to eq %w(id contact_id location_id organization_id
                                service_id country_prefix department extension
-                               number number_type vanity_number)
+                               number number_type vanity_number phone_hours)
   end
 
   it 'populates phone attribute values' do
     expect(csv.second).to eq [
       @phone.id.to_s, nil, @location.id.to_s, @org_id.to_s, @service.id.to_s,
-      nil, nil, '200', '650 851-1210', 'voice', nil]
+      nil, nil, '200', '650 851-1210', 'voice', nil, nil]
   end
 end
