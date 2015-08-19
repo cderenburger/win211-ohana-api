@@ -42,6 +42,10 @@ describe 'GET /locations/:location_id/phones' do
     it 'includes the vanity_number attribute in the serialization' do
       expect(json.first['vanity_number']).to eq(@first_phone.vanity_number)
     end
+
+    it 'includes the phone_hours attribute in the serialization' do
+      expect(json.first['phone_hours']).to eq(@first_phone.phone_hours)
+    end
   end
 
   context "when location doesn't have phones" do

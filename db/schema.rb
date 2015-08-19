@@ -148,6 +148,7 @@ ActiveRecord::Schema.define(version: 20140425033933) do
     t.text     "department"
     t.text     "extension"
     t.text     "vanity_number"
+    t.text     "phone_hours"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

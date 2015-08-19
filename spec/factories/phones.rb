@@ -13,5 +13,6 @@ FactoryGirl.define do
     department ' Information '
     extension '2000 '
     vanity_number ' 800-FLY-AWAY '
+    phone_hours 'M-F, 8am-5pm'
   end
 end

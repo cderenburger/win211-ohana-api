@@ -22,7 +22,8 @@ feature 'Update phones' do
       number_type: 'TTY',
       department: 'Director of Development',
       extension: '1234',
-      vanity_number: '123-ABC-DEFG'
+      vanity_number: '123-ABC-DEFG',
+      phone_hours: 'M-F, 8am-5pm'
     )
     click_button 'Save changes'
     visit '/admin/organizations/parent-agency'
@@ -41,6 +42,9 @@ feature 'Update phones' do
 
     expect(find_field('organization_phones_attributes_0_vanity_number').value).
       to eq '123-ABC-DEFG'
+
+    expect(find_field('organization_phones_attributes_0_phone_hours').value).
+      to eq 'M-F, 8am-5pm'
 
     delete_phone
     visit '/admin/organizations/parent-agency'
